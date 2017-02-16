@@ -61,24 +61,20 @@ h1 {
 @keyframes leaveAnim {
   0% {
     left: -100%;
-    opacity: 0;
   }
 
   100% {
     left: 0;
-    opacity: 1;
   }
 }
 
 @keyframes enterAnim {
   0% {
     left: 0;
-    opacity: 1;
   }
 
   100% {
     left: 100%;
-    opacity: 0;
   }
 }
 
@@ -94,11 +90,11 @@ h1 {
   background-color: #fff;
   z-index: 90;
   width: 100%;
-  opacity: 0;
+  opacity: 1;
 }
 
 .animation.is-leaving {
-  animation: leaveAnim .75s ease-in-out forwards;
+  animation: leaveAnim .65s ease-in-out forwards;
 }
 
 .animation.is-entering {
