@@ -1,0 +1,31 @@
+{
+  "name": "turbolinks-transitions",
+  "version": "1.0.0",
+  "description": "Page transitions for Turbolinks 5",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nerds-and-company/turbolinks-transitions.git"
+  },
+  "keywords": [
+    "turbolinks"
+  ],
+  "author": "Nerds & Company",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nerds-and-company/turbolinks-transitions/issues"
+  },
+  "homepage": "https://github.com/nerds-and-company/turbolinks-transitions#readme",
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "turbolinks": "^5.0.0"
+  },
+  "devDependencies": {
+    "animate.css": "^3.5.2",
+    "gulp": "^3.9.1",
+    "gulp-webserver": "^0.9.1"
+  }
+}

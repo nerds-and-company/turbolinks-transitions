@@ -1,0 +1,106 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: 'Pangolin', cursive;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #fff;
+  font-family: 'Pangolin', cursive;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  color: #fff;
+}
+
+.section.section--soft-red {
+  background-color: #ec644b;
+}
+
+.section.section--gossip {
+  background-color: #87d37c;
+}
+
+.content {
+  position: relative;
+  top: 50%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 30px;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.content h1 {
+  margin: 0;
+}
+
+@keyframes leaveAnim {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes enterAnim {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+.main {
+  height: 100%;
+}
+
+.animation {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  background-color: #fff;
+  z-index: 90;
+  width: 100%;
+  opacity: 0;
+}
+
+.animation.is-leaving {
+  animation: leaveAnim .75s ease-in-out forwards;
+}
+
+.animation.is-entering {
+  animation: enterAnim .75s ease-in-out forwards;
+}
