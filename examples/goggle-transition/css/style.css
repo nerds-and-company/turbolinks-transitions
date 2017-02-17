@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.products {
+  width: 100%;
+}
+
+.is-leaving .image:not(.active) {
+  animation: fadeOutProducts 2s both;
+}
+
+@keyframes fadeOutProducts {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.is-leaving .left.active {
+  animation: growItemLeft 1.5s both;
+  animation-delay: .5s;
+}
+
+@keyframes growItemLeft {
+  0% {
+  }
+
+  100% {
+    transform: scale(3);
+    transform-origin: top left;
+  }
+}
+
+.is-leaving .center.active {
+  animation: growItemCenter 1.5s both;
+  animation-delay: .5s;
+}
+
+@keyframes growItemCenter {
+  0% {
+  }
+
+  100% {
+    transform: scale(3);
+    transform-origin: top center;
+  }
+}
+
+.is-leaving .right.active {
+  animation: growItemRight 1.5s both;
+  animation-delay: .5s;
+}
+
+@keyframes growItemRight {
+  0% {
+    top: auto;
+  }
+
+  100% {
+    top: 0;
+    transform: scale(3);
+    transform-origin: top right;
+  }
+}
+
+.image {
+  position: relative;
+  display: block;
+  float: left;
+  width: calc(100%/3);
+  margin: 0;
+  padding: 50px;
+  opacity: 0;
+  animation: fadeIn .25s both;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.image.active {
+  opacity: 1;
+}
+
+.image img {
+  pointer-events: none;
+  display: block;
+  width: 100%;
+}
+
+.page.is-leaving {
+  animation: fadeOut .5s both;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.header {
+  width: 100%;
+  padding: 150px;
+}
+
+.page.is-leaving .header {
+  animation: shrinkItem .5s both;
+}
+
+@keyframes shrinkItem {
+  0% {}
+
+  100% {
+      transform: scale(.33);
+      transform-origin: top center;
+  }
+}
+
+.header img {
+  display: block;
+  width: 100%;
+}
+
+.close {
+  position: absolute;
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 25px;
+  border-radius: 25px;
+  border: 2px solid #eee;
+  top: 25px;
+  right: 25px;
+  font-family: sans-serif;
+  color: black;
+  text-decoration: none;
+  transition: .25s ease-in-out;
+}
+
+.close:hover {
+  background-color: #eee;
+}
