@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.vertical {
+    position: relative;
+    top: 50%;
+    transform: perspective(1px) translateY(-50%);
+}
+
+#telescopic-text {
+  background: #1E2A31;
+  font-family: 'Avenir', sans-serif;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  position: relative;
+  z-index: 10;
+  margin: 0 10vw;
+  font-size: 50px;
+  line-height: 70px;
+}
+
+.expander {
+    padding: 0 10px;
+    background: rgba(155,143,120,.2);
+    cursor: pointer;
+    transition: all ease-in-out .25s;
+    color: white;
+    text-decoration: none;
+}
+
+.expander:hover {
+    background: rgba(155,143,120,1);
+}
+
+.section {
+  display: none;
+}
+
+.section.expanded {
+  display: inline;
+}
+
+#particle-slider {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  margin-left: 60vw;
+  width: 40vw;
+  opacity: .5;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+
+  <!-- Javascript -->
+  <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../../node_modules/turbolinks/dist/turbolinks.js"></script>
+  <script src="js/index.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <section id="telescopic-text">
+    <div class="vertical">
+      <h1><span class="expander" id="section-we">We</span> <span class="section section-we">are Nerds &amp; Company and we</span> <span id="section-design" class="expander">design &amp; develop</span> <span class="section section-design"> interactive <span id="section-experiences" class="expander">experiences</span></span> <span class="section section-experiences">to make your business <span id="section-better" class="expander">better</span></span><span class="section section-better">, help you <span id="section-standout" class="expander">stand out</span> in the crowd</span> <span class="section section-standout">and be the pioneers of tomorrow</span></h1>
+    </div>
+    <div id="particle-slider" style="pointer-events: none;">
+  		<div class="slides">
+  			<div class="slide" data-src="assets/img/timar.png"></div>
+  		</div>
+  		<canvas class="draw"></canvas>
+	</div>
+  </section>
+  <script src="js/js-particleslider.js"></script>
+	<script type="text/javascript">
+		var ps = new ParticleSlider();
+  </script>  
+</body>
+</html>
