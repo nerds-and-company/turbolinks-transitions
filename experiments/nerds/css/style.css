@@ -5,6 +5,7 @@
 html,
 body {
   height: 100%;
+  font-family: sans-serif;
 }
 
 body {
@@ -69,4 +70,17 @@ h1 {
   margin-left: 60vw;
   width: 40vw;
   opacity: .5;
+}
+
+#cases {
+  overflow-x: hidden;
+}
+
+.slider .item {
+  margin: 50px;
+  background: #ccc;
+  padding: 50px;
+  width: 700px;
+  height: 400px;
+  outline: none;
 }

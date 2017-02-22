@@ -7,10 +7,12 @@
   <!-- Javascript -->
   <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
   <script src="../../node_modules/turbolinks/dist/turbolinks.js"></script>
-  <script src="js/index.js"></script>
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
 </head>
 <body>
   <section id="telescopic-text">
@@ -24,9 +26,26 @@
   		<canvas class="draw"></canvas>
 	</div>
   </section>
+
+  <section id="cases">
+    <div class="vertical">
+      <div class="slider">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+      </div>
+    </div>
+  </section>
+
   <script src="js/js-particleslider.js"></script>
 	<script type="text/javascript">
 		var ps = new ParticleSlider();
-  </script>  
+  </script>
+
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>

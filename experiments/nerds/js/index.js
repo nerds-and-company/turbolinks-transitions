@@ -38,3 +38,14 @@ $(function(){
     sections.first().addClass('expanded');
     });
 });
+
+
+// Slick slider
+
+$('.slider').slick({
+  centerMode: true,
+  infinite: false,
+  slidesToShow: 3,
+  variableWidth: true,
+  focusOnSelect: true
+});
