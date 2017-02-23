@@ -21,6 +21,7 @@ section {
 
 .vertical {
     position: relative;
+    z-index: 10;
     top: 50%;
     transform: perspective(1px) translateY(-50%);
 }
@@ -34,8 +35,6 @@ section {
 }
 
 h1 {
-  position: relative;
-  z-index: 10;
   margin: 0 10vw;
   font-size: 50px;
   line-height: 70px;
@@ -77,10 +76,125 @@ h1 {
 }
 
 .slider .item {
-  margin: 50px;
+  margin: 0 50px;
   background: #ccc;
   padding: 50px;
-  width: 700px;
-  height: 400px;
+  width: 50vw;
+  height: 30vh;
   outline: none;
+  text-decoration: none;
+}
+
+.is-leaving .item:not(.active) {
+  animation: fadeOutItem 1s both;
+}
+
+@keyframes fadeOutItem {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.is-leaving .item.active {
+  animation: growItem .75s both;
+  animation-delay: .25s;
+}
+
+.is-leaving .item.active h2 {
+  animation: fadeOutTitle 1s both;
+}
+
+@keyframes growItem {
+  0% {
+  }
+
+  100% {
+    width: 110vw;
+    height: 100vh;
+    margin-left: -25vw;
+    transform-origin: center;
+  }
+}
+
+.header {
+  width: 100vw;
+  height: 100vh;
+  background: #ccc;
+  padding: 50px;
+}
+
+.header .close {
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+.page.is-leaving .header {
+  animation: shrinkItem .5s both;
+  transform-origin: center;
+}
+
+.page.is-leaving .header h1 {
+    animation: fadeOutTitle .5s both;
+}
+
+@keyframes shrinkItem {
+  0% {
+    width: 100vw;
+    height: 100vh;
+  }
+
+    100% {
+      margin: 35vh 25vw;
+      width: 50vw;
+      height: 30vh;
+    }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOutTitle {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.item h2, .header h1 {
+  font-family: 'Avenir', sans-serif;
+  font-weight: 900;
+  color: #000;
+  font-size: 40px;
+  line-height: 50px;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header h1 {
+  font-size: 100px;
 }

@@ -2,11 +2,13 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="turbolinks-cache-control" content="no-cache">
   <title>Home</title>
 
   <!-- Javascript -->
-  <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
   <script src="../../node_modules/turbolinks/dist/turbolinks.js"></script>
+  <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="js/index.js"></script>
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
@@ -29,8 +31,10 @@
 
   <section id="cases">
     <div class="vertical">
-      <div class="slider">
-        <div class="item">1</div>
+      <div class="slider js-animation">
+        <a class="item" href="case.html">
+          <h2>SR Motion</h2>
+        </a>
         <div class="item">2</div>
         <div class="item">3</div>
         <div class="item">4</div>
@@ -42,10 +46,41 @@
 
   <script src="js/js-particleslider.js"></script>
 	<script type="text/javascript">
-		var ps = new ParticleSlider();
+    // ParticleSlider
+    var ps = new ParticleSlider();
   </script>
 
   <script type="text/javascript" src="slick/slick.min.js"></script>
-  <script src="js/index.js"></script>
+  <script type="text/javascript">
+    // Telescopic text
+    $(function(){
+    // attach event handlers to all expanders
+        $('.expander').bind('click', function () {
+        // find all sections with class name
+        // corresponding to expander's id
+        // that haven't been expanded yet
+        var sections = $('.' + this.id + ':not(.expanded)');
+        // if there's only one section left
+        // and we are doing our "last" expanding for this section
+        // remove "onclick" handler from this expander
+        // and stop highligting it (remove CSS class "expander")
+        if ( sections.length <= 1 ) {
+            $(this).removeClass('expander').unbind('click');
+        }
+        // expand first section
+        sections.first().addClass('expanded');
+        });
+    });
+
+    // Slick slider
+    $('.slider').slick({
+      centerMode: true,
+      infinite: false,
+      slidesToShow: 3,
+      variableWidth: true,
+      focusOnSelect: true
+    });
+  </script>
+
 </body>
 </html>
