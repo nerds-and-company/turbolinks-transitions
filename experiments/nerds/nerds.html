@@ -8,62 +8,228 @@
   <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
   <script src="../../node_modules/turbolinks/dist/turbolinks.js"></script>
   <script src="js/index.js"></script>
-  <script src="js/circular-slider.min.js"></script>
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
   <style>
 
+    #nerds {
+      background: #F1F4F6;
+      height: 900px;
+      border: 20px solid white;
+    }
+
+    .container {
+      position: relative;
+      width: 1220px;
+      margin: 0 auto;
+    }
+
+    #knobBG {
+      margin-top: 145px;
+    }
+
     #knobBG, #knob {
-    position:absolute;
-    background-image: url('assets/img/bg.png');
-    background-size: contain;
-    width:610px;
-    height:610px;
-    left: 50%;
-    margin-left: -305px;
+      position:absolute;
+      background-image: url('assets/img/bg.png');
+      background-size: contain;
+      width:610px;
+      height:610px;
+      left: 50%;
+      margin-left: -305px;
     }
 
     #description {
-    font-size:20px;
+      font-size:20px;
     }
 
     #knob {
-    background-image: url('assets/img/knob.png');
-    z-index: 1;
+      background-image: url('assets/img/knob.png');
+      z-index: 1;
     }
 
     #content{
-    width: 500px;
-    height:300px;
-    overflow: hidden;
-    pointer-events: none;
+      position: relative;
+      z-index: 999;
+      width: 100%;
+      height: 860px;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    #content::-webkit-scrollbar {
+      -webkit-appearance: none;
     }
 
     #content .box {
-    width: 300px;
-    height: 300px;
-    font-size:30px;
-    padding: 10px;
+      width: 100%;
+      height: 860px;
+      font-size:30px;
+    }
+
+    .box .text {
+      display: block;
+      float: left;
+      width: 305px;
+      height: 860px;
+      text-align: right;
+      padding-right: 50px;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: normal;
+      opacity: .5;
+    }
+
+    h3 {
+      padding-top: 35px;
+      font-size: 14px;
+    }
+
+    .box .image {
+      display: block;
+      float: left;
+      width: 610px;
+      height: 860px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .image img {
+      height: 750px;
+      margin-top: 300px;
     }
   </style>
 </head>
 <body>
-  <div class="vertical center">
-    <div id="knobBG">
-      <div id="knob"></div>
-    </div>
-    <div id="content">
-      <div>
-        <div class="box box1">One</div>
-        <div class="box box2">Two</div>
-        <div class="box box3">Three</div>
-        <div class="box box4">Four</div>
-        <div class="box box5">Five</div>
-        <div class="box box6">Six</div>
-        <div class="box box7">Seven</div>
-        <div class="box box8">Eight</div>
-        <div class="box box9">Nine</div>
+  <div id="nerds">
+    <div class="vertical">
+      <div class="container">
+        <div id="knobBG">
+          <div id="knob"></div>
+        </div>
+        <div id="content">
+          <div>
+            <div class="box box1">
+              <div class="text">
+                <div class="vertical">
+                  <h3>"dollmother"</h3>
+                  <h1>Sander</h1>
+                  <h2>wielrenner</h2>
+                </div>
+              </div>
+              <div class="image">
+                <img src="assets/img/nerd-1.png" alt="" />
+              </div>
+            </div>
+            <div class="box box2">
+              <div class="text">
+                <div class="vertical">
+                  <h3>"biggy"</h3>
+                  <h1>Rutger</h1>
+                  <h2>eetkampioen</h2>
+                </div>
+              </div>
+              <div class="image">
+                <img src="assets/img/nerd-2.png" alt="" />
+              </div>
+            </div>
+            <div class="box box3">
+              <div class="text">
+                <div class="vertical">
+                  <h3>"dollmother"</h3>
+                  <h1>Sander</h1>
+                  <h2>wielrenner</h2>
+                </div>
+              </div>
+              <div class="image">
+                <img src="assets/img/nerd-1.png" alt="" />
+              </div>
+            </div>
+            <div class="box box4">
+              <div class="text">
+                <div class="vertical">
+                  <h3>"biggy"</h3>
+                  <h1>Rutger</h1>
+                  <h2>eetkampioen</h2>
+                </div>
+              </div>
+              <div class="image">
+                <img src="assets/img/nerd-2.png" alt="" />
+              </div>
+            </div>
+            <div class="box box5">
+              <div class="text">
+                <div class="vertical">
+                  <h3>"dollmother"</h3>
+                  <h1>Sander</h1>
+                  <h2>wielrenner</h2>
+                </div>
+              </div>
+              <div class="image">
+                <img src="assets/img/nerd-1.png" alt="" />
+              </div>
+            </div>
+            <div class="box box6">
+              <div class="text">
+                <div class="vertical">
+                  <h3>"biggy"</h3>
+                  <h1>Rutger</h1>
+                  <h2>eetkampioen</h2>
+                </div>
+              </div>
+              <div class="image">
+                <img src="assets/img/nerd-2.png" alt="" />
+              </div>
+            </div>
+            <div class="box box7">
+              <div class="text">
+                <div class="vertical">
+                  <h3>"dollmother"</h3>
+                  <h1>Sander</h1>
+                  <h2>wielrenner</h2>
+                </div>
+              </div>
+              <div class="image">
+                <img src="assets/img/nerd-1.png" alt="" />
+              </div>
+            </div>
+            <div class="box box8">
+              <div class="text">
+                <div class="vertical">
+                  <h3>"biggy"</h3>
+                  <h1>Rutger</h1>
+                  <h2>eetkampioen</h2>
+                </div>
+              </div>
+              <div class="image">
+                <img src="assets/img/nerd-2.png" alt="" />
+              </div>
+            </div>
+            <div class="box box9">
+              <div class="text">
+                <div class="vertical">
+                  <h3>"dollmother"</h3>
+                  <h1>Sander</h1>
+                  <h2>wielrenner</h2>
+                </div>
+              </div>
+              <div class="image">
+                <img src="assets/img/nerd-1.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -140,6 +306,17 @@
   //grab the Draggable instances for the content and the knob, and store them in variables so that we can reference them in other functions very quickly.
   var dragContent = Draggable.get(content);
   var dragKnob = Draggable.get(knob);
+  </script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script>
+  window.sr = ScrollReveal({
+    container: '#content',
+    reset: true,
+    viewFactor: .8,
+    scale: 1
+  });
+    sr.reveal('.text');
+    sr.reveal('.image');
   </script>
 </body>
 </html>
