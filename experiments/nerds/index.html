@@ -44,6 +44,59 @@
     </div>
   </section>
 
+  <section id="about">
+    <div id="container">
+  		<div class="block" id="section1">
+  		    <div class="container">
+      		    <div class="text">
+      		        <h1>what about us?</h1>
+      		        <p>Wij creëren waarde voor organisaties door waarde voor mensen te creëren. We combineren creativiteit met techniek en innovatie. Met gelukkige Nerds jou klaarmaken voor de toekomst, dat is onze missie. </p>
+      		    </div>
+
+      		    <div class="image right">
+      		        <img id="image1" src="assets/img/image1.gif" alt="" />
+      		    </div>
+      		    <div style="clear: both;"></div>
+      		</div>
+  		</div>
+
+  		<div class="block" id="section2">
+  		    <div class="container">
+      		    <div class="text right">
+      		        <h1>the digital difference we make</h1>
+      		        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.</p>
+      		    </div>
+
+      		    <div class="image">
+       		        <img id="image2" src="assets/img/image2.jpg" alt="" />
+      		    </div>
+      		    <div style="clear: both;"></div>
+      		</div>
+  		</div>
+
+  		<div class="block" id="section3">
+  		    <div class="container">
+  		        <div class="text">
+  		            <h1>what we can do for you</h1>
+  		            <p>Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus.</p>
+  		        </div>
+
+  		        <div class="image right">
+      		        <img id="image3" src="assets/img/image3.jpg" alt="" />
+  		        </div>
+      		    <div style="clear: both;"></div>
+  		    </div>
+  		</div>
+
+  		<div class="section" id="section4">
+  		    <div class="container">
+
+  		    </div>
+  		</div>
+  	</div>
+  	<div class="box" id="box"></div>
+  </section>
+
   <script src="js/js-particleslider.js"></script>
 	<script type="text/javascript">
     // ParticleSlider
@@ -81,6 +134,71 @@
       focusOnSelect: true
     });
   </script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
+  <script>
+    $(function() {
+      var controller = new ScrollMagic.Controller();
 
+      var tween2 = new TimelineMax ()
+
+    	.add([
+    		TweenMax.fromTo("#box", 1, {left: '40%', }, {left: '0', ease: Expo.easeInOut}),
+    	]);
+
+    	var scene = new ScrollMagic.Scene({
+    		triggerElement: "#section3",
+    		triggerHook: 'onEnter',
+    		duration: $(window).height()
+    	})
+
+    	.setTween(tween2)
+    	.addIndicators()
+    	.addTo(controller);
+
+
+
+    	var tween1 = new TimelineMax ()
+
+    	.add([
+    		TweenMax.fromTo("#box", 1, {left: '0', }, {left: '40%', ease: Expo.easeInOut}),
+    	]);
+
+    	var scene = new ScrollMagic.Scene({
+    		triggerElement: "#section2",
+    		triggerHook: 'onEnter',
+    		duration: $(window).height()
+    	})
+
+    	.setTween(tween1)
+    	.addIndicators()
+    	.addTo(controller);
+
+
+
+    	var tween1b = new TimelineMax ()
+
+    	.add([
+    		TweenMax.fromTo("#image1", 1, {top: -10, left: -100}, {top: -200, left: -200}),
+    		TweenMax.fromTo("#image2", 1, {top: -200, left: -200}, {top: 0, left: 0}),
+    		TweenMax.fromTo("#image3", 1, {top: 100, left: 100}, {top: -100, left: -100}),
+    	]);
+
+    	var scene = new ScrollMagic.Scene({
+    		triggerElement: "#section1",
+    		triggerHook: 'onLeave',
+    		duration: $(window).height()*3
+    	})
+
+    	.setTween(tween1b)
+    	.addIndicators()
+    	.addTo(controller);
+
+
+
+    });
+    </script>
 </body>
 </html>
